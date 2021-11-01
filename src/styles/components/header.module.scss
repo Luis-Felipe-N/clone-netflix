@@ -1,0 +1,121 @@
+.headerContainer {
+    padding: 1rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to bottom, rgba(44, 44, 44, 0.897) , transparent);
+    position: absolute;
+    width: 100%;
+
+    .logo {
+        img {
+            width: 100px;
+            max-width: 100%;
+        }
+    }
+
+    nav {
+        flex: 1;
+        margin-left: 2rem;
+
+         a{
+             font-size: .9rem;
+             color: #fff;
+             text-decoration: none;
+
+             &.active {
+                 font-weight: 600;
+
+             }
+
+             & + a {
+                 margin-left: .5rem;
+             }
+         }
+    }
+
+    .options {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        button {
+            cursor: pointer;
+            background-color: transparent;
+            border: 0;
+        }
+
+        input {
+            display: none;
+        }
+        
+        .infantil {
+            color: #fff;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .user {
+            img {
+                border-radius: 5px;
+                overflow: hidden;
+                width: 35px;
+                max-width: 100%;
+            }
+        }
+
+        .optionsUser {
+            width: 100%;
+            flex-direction: column;
+            position: absolute;
+            top: 3rem;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: .5rem;
+            border-radius: 2px;
+            border: 1px #616161 solid;
+
+            display: none;
+            gap: .5rem;
+            justify-content: center;
+
+            button {
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+                img {
+                    border-radius: 2px;
+                    overflow: hidden;
+                    width: 35px;
+                    height: 35px;
+                } 
+                span {
+                    font-size: 1rem;
+                    color: var(--white);
+
+                }
+            }
+
+            .gerenciarPerfil {
+                color: var(--white);
+                text-decoration: none;
+                padding: .5rem 0;
+                font-size: .9rem;
+            }
+        }
+
+        .optionsUser.active {
+            display: flex;
+            animation: animaUp .2s;
+        }
+    }
+}
+
+@keyframes animaUp {
+    to {
+        top: 3rem;
+    } from {
+        top: 2rem;
+    }
+}
